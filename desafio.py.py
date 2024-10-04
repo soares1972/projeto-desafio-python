@@ -84,7 +84,7 @@ class Conta:
 
 
 class ContaCorrente(Conta):
-    def __init__(self, numero, cliente, limite=500, limite_saques=3):
+    def __init__(self, numero, cliente, limite=800, limite_saques=2):
         super().__init__(numero, cliente)
         self._limite = limite
         self._limite_saques = limite_saques
@@ -302,7 +302,7 @@ def criar_conta(numero_conta, clientes, contas):
 
 def listar_contas(contas):
     for conta in contas:
-        print("=" * 100)
+        print("=" * 300)
         print(textwrap.dedent(str(conta)))
 
 
@@ -340,3 +340,4 @@ def main():
 
 
 main()
+
